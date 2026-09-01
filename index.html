@@ -450,7 +450,6 @@
   </div>
 
   <footer>
-    <span>Fuente: Consolidado por Facultad · Postgrados por Facultad</span>
     <span id="lastFac"></span>
   </footer>
 </div>
@@ -888,8 +887,8 @@ function renderPregrado(zone, pg){
 
     <div class="section-title"><span class="n">04</span><h3>Titulación</h3><div class="line"></div></div>
     <div class="chart-grid thirds">
-      <div class="card"><h4>Titulación oportuna</h4><div class="note">${hasTitOp ? '% titulados en el tiempo formal de la carrera, por cohorte de ingreso' : 'Sin datos disponibles'}</div>${hasTitOp ? '<canvas id="chartTitOportuna"></canvas>' : emptyMini('Sin cohortes tituladas aún')}</div>
-      <div class="card"><h4>Titulación total</h4><div class="note">${hasTitTot ? '% titulados en total (con rezago), por cohorte de ingreso' : 'Sin datos disponibles'}</div>${hasTitTot ? '<canvas id="chartTitTotal"></canvas>' : emptyMini('Sin cohortes tituladas aún')}</div>
+      <div class="card"><h4>Titulación oportuna</h4><div class="note">${hasTitOp ? '% titulados en el tiempo formal de la carrera + 1 año, por cohorte de ingreso' : 'Sin datos disponibles'}</div>${hasTitOp ? '<canvas id="chartTitOportuna"></canvas>' : emptyMini('Sin cohortes tituladas aún')}</div>
+      <div class="card"><h4>Titulación total</h4><div class="note">${hasTitTot ? '% titulados en total, por cohorte de ingreso' : 'Sin datos disponibles'}</div>${hasTitTot ? '<canvas id="chartTitTotal"></canvas>' : emptyMini('Sin cohortes tituladas aún')}</div>
     </div>
 
     <div class="section-title"><span class="n">05</span><h3>Planta docente y jornadas académicas</h3><div class="line"></div></div>
@@ -908,7 +907,7 @@ function renderPregrado(zone, pg){
 
     <div class="section-title"><span class="n">07</span><h3>Detalle por carrera</h3><div class="line"></div></div>
     <div class="ledger-wrap"><table class="ledger" id="tblCarreras"></table></div>
-    <div class="note" style="margin-top:8px; font-size:11px;">* La ocupación de vacantes no considera Conducencias ni PACE.</div>
+    <div class="note" style="margin-top:8px; font-size:11px;">* La ocupación de vacantes no considera Conducencias ni PACE. Para las carreras con Ingreso DEMRE, la tasa se calcula Matriculados Demre/Vacantes Ofrecidas. Para carreras con ingreso diferente a DEMRE, se calcula (Matriculados Ingreso Especial + Matriculados Ingreso Complementario)/Vacantes Ofrecidas.</div>
   `;
 
   if(hasMultiple) wireCarreraSelector();

@@ -904,10 +904,10 @@ function renderPregrado(zone, pg){
     <div class="chart-grid thirds">
       <div class="card">${hasAltPeriods ? '<h4>Vacantes vs. matriculados en otros períodos</h4><div class="note">'+(selected ? scopeSuffix.replace(' — ','') : 'Suma Facultad')+': 2do sem., 1er y 3er trimestre</div><canvas id="chartPeriodos"></canvas>' : '<h4>Vacantes vs. matriculados en otros períodos</h4>'+emptyMini('Sin datos disponibles')}</div>
       <div class="card">
-        <h4>Detalle por carrera</h4><div class="note">Vacantes ofrecidas y matriculados por año</div>
+        <h4>Detalle por carrera</h4><div class="note">Vacantes ofrecidas en otros períodos y matriculados</div>
         ${hasAltPeriods ? '<div class="ledger-wrap" style="border:none;"><table class="ledger" id="tblPeriodos"></table></div>' : emptyMini('Sin datos disponibles')}
         ${hasTrimestreDetalle ? `
-        <h4 style="margin-top:22px;">Detalle de matriculados por trimestre</h4><div class="note">Desglose de matriculados 2026 al 9 de septiembre del 2026</div>
+        <h4 style="margin-top:22px;">Detalle de matriculados por trimestre</h4><div class="note">Desglose de matriculados 2026 (en períodos diferentes al 1er Semestre), se consideró hasta el 21 de septiembre del 2026</div>
         <div class="ledger-wrap" style="border:none;"><table class="ledger" id="tblTrimestres"></table></div>` : ''}
       </div>
     </div>` : ''}
